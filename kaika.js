@@ -9,9 +9,9 @@
 默认脚本不执行
 如需执行脚本请设置环境变量
 做任务
-guaopencardRun17="true"
+guaopencardRunall="true"
 开卡
-guaopencard17="true"
+guaopencardall="true"
 
 ————————————————
 因需要加载依赖文件

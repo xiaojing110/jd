@@ -51,7 +51,7 @@ if ($.isNode()) {
             ]
             $.appkey = "51B59BB805903DA4CE513D29EC448375"
             $.userId = "10299171"
-            $.actId = "98a976e9f0_22021301"
+            $.actId = "b134063c47974580a18d208412_22021501"
             // $.authorCode = authorCodeList[random(0, authorCodeList.length)]
             $.authorCode = ownCode ? ownCode : authorCodeList[random(0, authorCodeList.length)]
             console.log('去助力 -> '+$.authorCode);

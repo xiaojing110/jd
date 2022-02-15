@@ -1,4 +1,3 @@
-@@ -0,0 +1,51 @@
 rm -rf ck sc pt
 cl(){
 read -p "请输入手机号: " mobile

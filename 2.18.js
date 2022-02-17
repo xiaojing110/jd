@@ -1,5 +1,6 @@
 /*
 TG https://t.me/duckjobs
+cron:1 0 0 * * *
 */
 const $ = new Env("大牌联合");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';

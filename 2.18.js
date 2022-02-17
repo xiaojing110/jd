@@ -1,11 +1,12 @@
 /*
-TG https://t.me/duckjobs
-cron:1 0 0 * * *
+https://jinggengjcq-isv.isvjcloud.com/fronth5/#/pages/unitedCardNew20211118/unitedCardNew20211118?actId=002sfydcg550d840ce832_1118
 */
 const $ = new Env("大牌联合");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
+const cp = $.isNode() ? require('child_process') : '';
 let cookiesArr = [], cookie = '', message = '';
+const Base64 = require("js-base64")
 let ownCode = null;
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
@@ -48,11 +49,11 @@ if ($.isNode()) {
             $.ADID = getUUID('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', 1);
             $.UUID = getUUID('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
             authorCodeList = [
-                'WjbvPuvPPPqABbZlw1ZxDF4tLNYA4seuA67MOIYQxEk3Vl9+AVo4NF+tgyeIc6A6kdK3rLBQpEQH9V4tdrrh0w==',
+                'fuMB6t0LHdtq7Dc8pm+TwF4tLNYA4seuA67MOIYQxEk3Vl9+AVo4NF+tgyeIc6A6kdK3rLBQpEQH9V4tdrrh0w==',
             ]
             $.appkey = "51B59BB805903DA4CE513D29EC448375"
             $.userId = "10299171"
-            $.actId = "628b293b355c42e39d5fea6f583e_20220212"
+            $.actId = "002sfydcg550d840ce832_1118"
             // $.authorCode = authorCodeList[random(0, authorCodeList.length)]
             $.authorCode = ownCode ? ownCode : authorCodeList[random(0, authorCodeList.length)]
             console.log('去助力 -> '+$.authorCode);
@@ -221,7 +222,7 @@ function getShopOpenCardInfo(venderId) {
             Cookie: cookie,
             'User-Agent': `jdapp;iPhone;9.5.4;13.6;${$.UUID};network/wifi;ADID/${$.ADID};model/iPhone10,3;addressid/0;appBuild/167668;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
             'Accept-Language': 'zh-cn',
-            Referer: `https://shopmember.m.jd.com/shopcard/?venderId=${venderId}}&channel=401&returnUrl=${encodeURIComponent('https://mpdz3-isv.isvjcloud.com/fronth5')}`,
+            Referer: `https://shopmember.m.jd.com/shopcard/?venderId=${venderId}}&channel=401&returnUrl=${encodeURIComponent('https://jinggengjcq-isv.isvjcloud.com/fronth5')}`,
             'Accept-Encoding': 'gzip, deflate, br'
         }
     }
@@ -257,7 +258,7 @@ function bindWithVender(venderId) {
             Cookie: cookie,
             'User-Agent': `jdapp;iPhone;9.5.4;13.6;${$.UUID};network/wifi;ADID/${$.ADID};model/iPhone10,3;addressid/0;appBuild/167668;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
             'Accept-Language': 'zh-cn',
-            Referer: `https://shopmember.m.jd.com/shopcard/?venderId=${venderId}}&channel=401&returnUrl=${encodeURIComponent('https://mpdz3-isv.isvjcloud.com/fronth5')}`,
+            Referer: `https://shopmember.m.jd.com/shopcard/?venderId=${venderId}}&channel=401&returnUrl=${encodeURIComponent('https://jinggengjcq-isv.isvjcloud.com/fronth5')}`,
             'Accept-Encoding': 'gzip, deflate, br'
         }
     }
@@ -283,18 +284,18 @@ function bindWithVender(venderId) {
 }
 function taskUrl(function_id, body) {
     return {
-        url: `https://mpdz3-isv.isvjcloud.com/dm/front/openCardNew/${function_id}?&mix_nick=${$.buyerNick ? $.buyerNick : ""}`,
+        url: `https://jinggengjcq-isv.isvjcloud.com/dm/front/openCardNew/${function_id}?&mix_nick=${$.buyerNick ? $.buyerNick : ""}`,
         headers: {
-            Host: 'mpdz3-isv.isvjcloud.com',
+            Host: 'jinggengjcq-isv.isvjcloud.com',
             Accept: 'application/json',
             'X-Requested-With': 'XMLHttpRequest',
             'Accept-Language': 'zh-cn',
             'Accept-Encoding': 'gzip, deflate, br',
             'Content-Type': 'application/json; charset=utf-8',
-            Origin: 'https://mpdz3-isv.isvjcloud.com',
+            Origin: 'https://jinggengjcq-isv.isvjcloud.com',
             'User-Agent': `jdapp;iPhone;9.5.4;13.6;${$.UUID};network/wifi;ADID/${$.ADID};model/iPhone10,3;addressid/0;appBuild/167668;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
             Connection: 'keep-alive',
-            Referer: 'https://mpdz3-isv.isvjcloud.com/fronth5/',
+            Referer: 'https://jinggengjcq-isv.isvjcloud.com/fronth5/',
             Cookie: cookie
         },
         body: JSON.stringify(body)

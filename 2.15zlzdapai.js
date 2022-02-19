@@ -1,7 +1,7 @@
 /*
 cron:6 0 * * *
 */
-const $ = new Env("2.15垃圾助力值大牌联合");
+const $ = new Env("2.20-2.26大牌集合");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', message = '';
